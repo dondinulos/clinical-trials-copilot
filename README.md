@@ -4,8 +4,8 @@ I'm a Sr. Architect with Microsoft Industry Solutions Delivery, Healthcare and L
 
 ## Idea
 - I wanted to learn hands-on Azure OpenAI resources, model deployments of i.e. chat model (e.g. `gpt-35-turbo-16k`, `gpt-4`) with some kind of use case in mind.
-- I asked myself "Is there a way to search Clinical Trials data using ChatGPT?" There are ways to search clinical trials via ClinicalTrials.gov and the dataset is public.
-- So, I embarked on answering this question and I ended up deploying the following components:
+- Since I'm in the Healthcare and Life Science industry, I was looking for use cases that could be helpful and ended asking "Is there a way to search Clinical Trials data using ChatGPT?" Of course, there are other ways to search clinical trials via ClinicalTrials.gov and the dataset is public but wanted to combine OpenAI + AI Search + ChatPT.
+- So, I embarked on answering this question and learning along the way  ended up deploying the following components:
   - Azure OpenAI Service
   - Blob Storage (Several ways to get data here: https://classic.clinicaltrials.gov/ct2/resources/download. I just went with a simple storage so I can house the XML files)
   - Azure AI Search Index
@@ -19,6 +19,7 @@ I'm a Sr. Architect with Microsoft Industry Solutions Delivery, Healthcare and L
 
 
 ## Azure Open AI
+Just create a Standard Tier Azure OpenAI Service to build your own secure copilot and generative AI applications.
 
 ## Data Source / Blob Storage
 Uploaded XML files from https://classic.clinicaltrials.gov/AllPublicXML.zip into my blob storage account.
@@ -41,26 +42,33 @@ Using the Open AI Sample Chat App, was able to deploy the app **https://clinical
 ![image](https://github.com/dondinulos/clinical-trials-copilot/assets/10526770/fc4ae921-61ac-4062-8202-b7a0448f5dbb)
 ![image](https://github.com/dondinulos/clinical-trials-copilot/assets/10526770/78545c5e-acca-477c-adc7-5bc2c33238cf)
 
+## Sample Prompts
+- Can you tell me colon cancer clinical trials? 
+- Are there any clinical trials for breast cancer?
+- What are the requirements to participate in the breast cancer study?
+- Are there any clinical trials for multiple myeloma?
+- Any there any clinical trials dealing with adverse symptoms of Covid?
+- Can you find me clinical trials for Tourette Syndrome?
+- Are there any lung cancer clinical trials in Washington, D.C.?
+-- What about in California?
+- What are the inclusion criteria for colon cancer clinical trials?
+- What treatments are available for colon cancer?
+- What is tamoxifen used for?
+- What is invasive breast cancer?
+- What are biomarkers?
+- What’s the mortality rate for breast cancer?
+- What’s the survivability rate for colon cancer?
+- Are there any foods that I shouldn't eat if I have breast cancer?
 
 ## PowerBI
 Connect PowerBI.com or PowerBI Desktop to the Azure CosmosDB and do a word cloud. The PBIX file is under: **powerbi/Clinical Trials Copilot Conversations.pbix**
 ![image](https://github.com/dondinulos/clinical-trials-copilot/assets/10526770/0b6617f8-b369-4cca-ac0f-ea4276212b7d)
 
+## Learnings
+- Copilot summarizes the number clinical trials it found and doesn’t return all from ClinicalTrials.gov.
+- The maximum number of results is capped at 20 but sometimes returns less than this depending on the prompt.
+- Because it’s public data, the out-of-the-box Microsoft Copilot will already provide some details about clinical trials from ClinicalTrials.gov. This excercise would be beneficial if the data is not public and want to "Bring your own data".
 
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Trademarks
 
