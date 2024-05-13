@@ -1,6 +1,6 @@
 # Clinical Trials Custom Copilot
 
-I'm a Sr. Architect and Responsible AI Champ with Microsoft Industry Solutions Delivery, Healthcare and Life Science OU and have extensive experience, over 24 years in the industry. I've always tied technology to their use cases and what problems it can solve and the business outcomes. I am very technical, a background in computer engineering, computer science, programming and development but approaching solutions only from a technical perpsective hasn't always panned out without looking at how it'll be used and who's using it.
+I'm a Sr. Architect and Responsible AI Champ at Microsoft, Industry Solutions Delivery, Healthcare and Life Science OU and have extensive experience, over 24 years in the industry. I've always tied technology to their use cases and what problems it can solve and the business outcomes. I am very technical, a background in computer engineering, computer science, programming and development but approaching solutions only from a technical perpsective hasn't always panned out without looking at how it'll be used and who's using it.
 
 ## Idea
 - I wanted to learn hands-on Azure OpenAI resources, model deployments of i.e. chat model (e.g. `gpt-35-turbo-16k`, `gpt-4`) with some kind of use case in mind.
