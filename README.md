@@ -9,7 +9,7 @@ I'm a Sr. Architect at Microsoft Industry Solutions Delivery, Healthcare and Lif
   - Azure OpenAI Service
   - Blob Storage (Several ways to get data here: https://classic.clinicaltrials.gov/ct2/resources/download. I just went with a simple storage so I can house the XML files)
   - Azure AI Search Index
-  - A Chat App UX (Luckily there is a sample app available I can use to start from https://github.com/microsoft/sample-app-aoai-chatGPT/)
+  - A Chat App UX (Luckily there is a sample app available I can use to start from https://github.com/microsoft/sample-app-aoai-chatGPT/). I've cloned that repo to start the clinical trials copilot repo.
   - Azure CosmosDB to store chat history (this is also included in the sample AOAI chat app)
   - PowerBI to view chat data from CosmosDB
 
