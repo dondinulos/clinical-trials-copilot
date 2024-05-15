@@ -37,7 +37,7 @@ Adding the AI Search Index in AI Studio playground to test the data.
 
 
 ## Chat App UX
-Using the Open AI Sample Chat App, was able to deploy the app **https://clinical-trials-copilot.azurewebsites.net/**. NOTE: Don't use the One-click deploy to Azure Deployment as it uses an image from a countainer that may not be up to date with the latest code, use the Deploy with the Azure CLI instead using `az webapp up...'
+Using the Open AI Sample Chat App, was able to deploy the app. NOTE: Don't use the One-click deploy to Azure Deployment as it uses an image from a countainer that may not be up to date with the latest code, use the Deploy with the Azure CLI instead using `az webapp up...'
 
 ![image](https://github.com/dondinulos/clinical-trials-copilot/assets/10526770/fc4ae921-61ac-4062-8202-b7a0448f5dbb)
 ![image](https://github.com/dondinulos/clinical-trials-copilot/assets/10526770/78545c5e-acca-477c-adc7-5bc2c33238cf)
