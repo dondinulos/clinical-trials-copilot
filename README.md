@@ -1,10 +1,10 @@
 # Clinical Trials Custom Copilot
 
-I'm a Sr. Architect with Microsoft Industry Solutions Delivery, Healthcare and Life Science OU and have extensive experience, over 24 years in the industry. I've always tied technology to their use cases and what problems it can solve and the business outcomes. I am very technical, a background in computer engineering, computer science, programming and development but approaching solutions only from a technical perpsective hasn't always panned out without looking at how it'll be used and who's using it.
+I'm a Sr. Architect and Responsible AI Champ at Microsoft, Industry Solutions Delivery, Healthcare and Life Science OU and have extensive experience, over 24 years in the industry. I've always tied technology to their use cases and what problems it can solve and the business outcomes. I am very technical, a background in computer engineering, computer science, programming and development but approaching solutions only from a technical perpsective hasn't always panned out without looking at how it'll be used and who's using it.
 
 ## Idea
 - I wanted to learn hands-on Azure OpenAI resources, model deployments of i.e. chat model (e.g. `gpt-35-turbo-16k`, `gpt-4`) with some kind of use case in mind.
-- Since I'm in the Healthcare and Life Science industry, I was looking for use cases that could be helpful and ended asking "Is there a way to search Clinical Trials data using ChatGPT?" Of course, there are other ways to search clinical trials via ClinicalTrials.gov and the dataset is public but wanted to combine OpenAI + AI Search + ChatPT.
+- Since I'm in the Healthcare and Life Science industry, I was looking for use cases that could be helpful and ended asking "Is there a way to search Clinical Trials data using ChatGPT?" Of course, there are other ways to search clinical trials via ClinicalTrials.gov and the dataset is public but wanted to combine OpenAI + AI Search + ChatGPT.
 - So, I embarked on answering this question and learning along the way  ended up deploying the following components:
   - Azure OpenAI Service
   - Blob Storage (Several ways to get data here: https://classic.clinicaltrials.gov/ct2/resources/download. I just went with a simple storage so I can house the XML files)
@@ -37,7 +37,7 @@ Adding the AI Search Index in AI Studio playground to test the data.
 
 
 ## Chat App UX
-Using the Open AI Sample Chat App, was able to deploy the app **https://clinical-trials-copilot.azurewebsites.net/**. NOTE: Don't use the One-click deploy to Azure Deployment as it uses an image from a countainer that may not be up to date with the latest code, use the Deploy with the Azure CLI instead using `az webapp up...'
+Using the Open AI Sample Chat App, was able to deploy the app. NOTE: Don't use the One-click deploy to Azure Deployment as it uses an image from a countainer that may not be up to date with the latest code, use the Deploy with the Azure CLI instead using `az webapp up...'
 
 ![image](https://github.com/dondinulos/clinical-trials-copilot/assets/10526770/fc4ae921-61ac-4062-8202-b7a0448f5dbb)
 ![image](https://github.com/dondinulos/clinical-trials-copilot/assets/10526770/78545c5e-acca-477c-adc7-5bc2c33238cf)
