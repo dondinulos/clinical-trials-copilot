@@ -2,62 +2,100 @@ targetScope = 'subscription'
 
 @minLength(1)
 @maxLength(64)
-@description('Name of the the environment which is used to generate a short unique hash used in all resources.')
+@description('Name of the environment, used to generate a unique hash for all resources.')
 param environmentName string
 
 @minLength(1)
-@description('Primary location for all resources')
+@description('Primary Azure region for all resources (e.g., eastus, westeurope).')
 param location string
 
+@description('Name of the App Service Plan. If not provided, a default will be generated.')
 param appServicePlanName string = ''
+@description('Name of the backend App Service. If not provided, a default will be generated.')
 param backendServiceName string = ''
+@description('Name of the main resource group. If not provided, a default will be generated.')
 param resourceGroupName string = ''
 
+@description('Name of the Azure Cognitive Search service. If not provided, a default will be generated.')
 param searchServiceName string = ''
+@description('Resource group for the search service. If not provided, uses main resource group.')
 param searchServiceResourceGroupName string = ''
+@description('Location for the search service resource group.')
 param searchServiceResourceGroupLocation string = location
+@description('SKU for the search service.')
 param searchServiceSkuName string = ''
+@description('Name of the search index.')
 param searchIndexName string = 'gptkbindex'
+@description('Enable semantic search.')
 param searchUseSemanticSearch bool = false
+@description('Semantic search config name.')
 param searchSemanticSearchConfig string = 'default'
+@description('Top K results for search.')
 param searchTopK int = 5
+@description('Enable in-domain search.')
 param searchEnableInDomain bool = true
+@description('Content columns for search.')
 param searchContentColumns string = 'content'
+@description('Filename column for search.')
 param searchFilenameColumn string = 'filepath'
+@description('Title column for search.')
 param searchTitleColumn string = 'title'
+@description('URL column for search.')
 param searchUrlColumn string = 'url'
 
+@description('Name of the Azure OpenAI resource. If not provided, a default will be generated.')
 param openAiResourceName string = ''
+@description('Resource group for the OpenAI resource. If not provided, uses main resource group.')
 param openAiResourceGroupName string = ''
+@description('Location for the OpenAI resource group.')
 param openAiResourceGroupLocation string = location
+@description('SKU for the OpenAI resource.')
 param openAiSkuName string = ''
+@description('Deployment name for the main OpenAI model.')
 param openAIModel string = 'turbo16k'
+@description('Name of the main OpenAI model.')
 param openAIModelName string = 'gpt-35-turbo-16k'
+@description('Temperature for OpenAI completions.')
 param openAITemperature int = 0
+@description('Top P for OpenAI completions.')
 param openAITopP int = 1
+@description('Max tokens for OpenAI completions.')
 param openAIMaxTokens int = 1000
+@description('Stop sequence for OpenAI completions.')
 param openAIStopSequence string = ''
+@description('System message for OpenAI completions.')
 param openAISystemMessage string = 'You are an AI assistant that helps people find information.'
+@description('API version for OpenAI.')
 param openAIApiVersion string = '2023-06-01-preview'
+@description('Enable streaming for OpenAI completions.')
 param openAIStream bool = true
+@description('Deployment name for embedding model.')
 param embeddingDeploymentName string = 'embedding'
+@description('Name of the embedding model.')
 param embeddingModelName string = 'text-embedding-ada-002'
 
 // Used by prepdocs.py: Form recognizer
+@description('Name of the Form Recognizer service.')
 param formRecognizerServiceName string = ''
+@description('Resource group for the Form Recognizer service.')
 param formRecognizerResourceGroupName string = ''
+@description('Location for the Form Recognizer resource group.')
 param formRecognizerResourceGroupLocation string = location
+@description('SKU for the Form Recognizer service.')
 param formRecognizerSkuName string = ''
 
 // Used for the Azure AD application
+@description('Client ID for Azure AD authentication.')
 param authClientId string
 @secure()
+@description('Client secret for Azure AD authentication.')
 param authClientSecret string
 
 // Used for Cosmos DB
+@description('Cosmos DB account name. If not provided, a default will be generated.')
 param cosmosAccountName string = ''
 
-@description('Id of the user or app to assign application roles')
+@description('Id of the user or app to assign application roles.')
 param principalId string = ''
 
 var abbrs = loadJsonContent('abbreviations.json')
@@ -315,7 +353,7 @@ output AZURE_OPENAI_MODEL string = openAIModel
 output AZURE_OPENAI_MODEL_NAME string = openAIModelName
 output AZURE_OPENAI_SKU_NAME string = openAi.outputs.skuName
 output AZURE_OPENAI_KEY string = openAi.outputs.key
-output AZURE_OPENAI_EMBEDDING_NAME string = '${embeddingDeploymentName}'
+output AZURE_OPENAI_EMBEDDING_NAME string = embeddingDeploymentName
 output AZURE_OPENAI_TEMPERATURE int = openAITemperature
 output AZURE_OPENAI_TOP_P int = openAITopP
 output AZURE_OPENAI_MAX_TOKENS int = openAIMaxTokens
